@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hello_flutter/shared/menu_bottom.dart';
 import '../shared/menu_drawer.dart';
 
 class IntroScreen extends StatelessWidget {
@@ -9,6 +10,7 @@ class IntroScreen extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(title: Text('Globo Fitness')),
         drawer: MenuDrawer(),
+        bottomNavigationBar: MenuBottom(),
         body: Container(
           decoration: BoxDecoration(
               image: DecorationImage(
@@ -22,15 +24,35 @@ class IntroScreen extends StatelessWidget {
               borderRadius: BorderRadius.all(Radius.circular(20)),
               color: Colors.white70,
             ),
-            child: Text('Commit to fit, dare to be great \n with globo fitness',
-                textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 22, shadows: [
-                  Shadow(
-                      offset: Offset(1.0, 1.0),
-                      blurRadius: 2.0,
-                      color: Colors.grey)
-                ])),
+            child:
+                Text('Commit to be fit, dare to be great \nwith Globo Fitness',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: 22,
+                      shadows: [
+                        Shadow(
+                          offset: Offset(1.0, 1.0),
+                          blurRadius: 2.0,
+                          color: Colors.grey,
+                        )
+                      ],
+                    )),
           )),
         ));
+  }
+}
+
+class HelloYou extends StatefulWidget {
+  const HelloYou({Key? key}) : super(key: key);
+
+  @override
+  _HelloYouState createState() => _HelloYouState();
+}
+
+class _HelloYouState extends State<HelloYou> {
+  @override
+  Widget build(BuildContext context) {
+    
+    return Container();
   }
 }
